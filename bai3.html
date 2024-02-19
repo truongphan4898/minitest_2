@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+let a=prompt("Nhập các số nguyên: ")
+let arr=a.split(",").map(Number)
+function kiemtrasonguuyento(num){
+    if(num<2){
+        return false
+    }
+    for(let i=2;i<num;i++) {
+        if (num % i === 0) {
+            return false
+        }
+    }
+        return true
+}
+function tongsonguyento(b){
+    let sum=0
+    for(let i=0;i<b.length;i++){
+        if(kiemtrasonguuyento(b[i])){
+            sum+=b[i]
+        }
+    }
+    return sum
+}
+let result=tongsonguyento(arr)
+document.write("Tổng các số nguyên tố trong mảng là: "+result)
+</script>
+</html>

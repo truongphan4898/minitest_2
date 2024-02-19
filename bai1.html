@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a=prompt("Nhập mảng: ")
+    let arr=a.split("").map(Number)
+    let count=0
+    let b=[]
+    for(let i=0;i<arr.length;i++){
+        if(arr[i] % 2 === 0){
+            count++
+            b.push(arr[i])
+        }
+    }
+  document.write("Số lượng các số chẵn trong mảng là: "+ count+"<br>"+ "Các số chẵn trong mảng là: "+b)
+</script>
+</html>
